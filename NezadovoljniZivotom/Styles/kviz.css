@@ -1,0 +1,43 @@
+button {
+    border: 0px;
+    background-color: transparent;
+}
+
+button:hover p {
+    text-decoration: underline;
+}
+
+.border {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.quiz-container {
+    background: url("../Images/version1.jpg") no-repeat center center;
+    padding: 10px;
+    border-style: double;
+    border-color: #9C3E3E;
+    border-width: 10px;
+    width: 50%;
+}
+
+#question {
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+#answers {
+    margin: 10px;
+}
+
+
+

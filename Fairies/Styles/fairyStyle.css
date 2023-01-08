@@ -1,0 +1,98 @@
+html, body {
+    background: url("/Fairies/Images/fairyBacc.png") no-repeat center center;
+    background-size: cover;
+    color: white;
+    font-family: Verdana;
+    margin: 0px;
+    padding: 0px;
+    /* font-style: italic; */
+    overflow:hidden;
+    position:relative;
+    z-index:0;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    height: 35%;
+}
+.title{
+    width: 70%;
+}
+
+p{
+    font-size: 18px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-top: 0px;
+}
+.fairy--container{
+    display: flex;
+    justify-content: center;
+    height:65%;
+    background: url("/Fairies/Images/BackgroundLg.png")  no-repeat center center ;
+    background-size: contain;
+}
+
+.fairy--container button{
+    margin-top: 5%;
+    width:300px;
+    height:50px;
+    border-radius: 25px;
+    border-color: #f8faed;
+    border-width: 3px;
+    background-color: black;
+}
+
+.fairy--container button:hover{
+    box-shadow: 0 0 50px 15px #f8faed;
+}
+.buttonImage{
+    max-width: 200px;
+    max-height: 35px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 5px 0px 0px 5px;
+}
+
+:root {
+    --width: 300px;
+    --x-speed: 5s;
+    --y-speed: 3s;
+    --transition-speed: 2.2s;
+}
+
+.el {
+    position:absolute;
+    z-index: 10;
+    width: var(--width);
+    height: var(--width);
+    font-size: 18px;
+    color: red;
+}
+
+.el:hover{
+    text-decoration: underline;
+}
+.x {
+    animation: x var(--x-speed) linear infinite alternate;
+}
+
+.y {
+    animation: y var(--y-speed) linear infinite alternate;
+}
+
+@keyframes x {
+    100% {
+        transform: translateX(calc(100vw - var(--width)));
+    }
+}
+
+@keyframes y {
+    100% {
+        transform: translateY(calc(100vh - var(--width)));
+    }
+}

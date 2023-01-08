@@ -1,0 +1,112 @@
+.position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#product-container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 65%;
+    border: 5px solid #B94545;
+    border-style: double;
+
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+    background: url("../Images/treeBackground.jpg");
+    background-size: cover;
+
+    animation: glow 1s infinite alternate;
+}
+
+#product-container img {
+    margin: 2rem 0rem 0rem 0rem;
+    border: 3px solid #B94545;
+    border-style: double;
+    width: 140px;
+    height: 184px;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: (0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    to {
+        -webkit-box-shadow: 0 0 55px #990909;
+        -moz-box-shadow: 0 0 55px #990909;
+        -ms-box-shadow: 0 0 55px #990909;
+        box-shadow: 0 0 55px #990909;
+    }
+}
+
+#product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+
+}
+
+#product h3 {
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 0.25rem;
+    color: #C3D6D9;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#product button {
+    width: 300px;
+    height: 50px;
+    align-self: center;
+    background-color: bisque;
+    border: 5px solid #B94545;
+    border-radius: 64px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.45));
+    margin-bottom: 30px;
+}
+
+#product a {
+    font-family: 'Inter';
+    font-size: 20px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.product-detail {
+    color: white;
+    font-size: 14px;
+}
+
+.price {
+    display: flex;
+    margin-bottom: 0.5rem;
+}
+
+.crossed {
+    /*margin-right: 3rem;*/
+    margin: 0px 30px 0px 0px;
+    text-decoration: line-through;
+    color: black;
+    line-height: 55px;
+    font-size: 20px;
+}
+
+.final {
+    margin: 0px;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 46px;
+
+
+    color: #C3D6D9;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+

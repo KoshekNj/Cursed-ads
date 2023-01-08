@@ -1,0 +1,175 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url("../Images/sunBackgroundlow.jpg") no-repeat center center;
+    background-size: cover;
+    color: black;
+    font-family: Verdana;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-style: double;
+    border-color: #9C3E3E;
+    border-width: 10px;
+    /* font-style: italic; */
+    min-height: 100vh;
+
+}
+
+h2 {
+    margin: auto auto 15px auto;
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 58px;
+    color: #A3C6CB;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.underline p {
+    text-decoration: underline;
+}
+
+p {
+    color: #9C3E3E;
+}
+
+a {
+    color: #98230C;
+    text-decoration: none;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.home__right-side {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.home__right-side button {
+    width: 300px;
+    height: 50px;
+    align-self: center;
+    background-color: bisque;
+    border: 5px solid #B94545;
+    border-radius: 64px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    font-family: 'Inter';
+    margin: 30px;
+}
+
+.home__right-side a {
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.home__nav-bar {
+    background: url("../Images/version2.jpg");
+    border-style: double;
+    border-color: #9C3E3E;
+    border-width: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.home__nav-bar a {
+    margin: 10px 0px 0px 10px;
+}
+
+.guru__info {
+    background: url("../Images/version2.jpg");
+    border-style: double;
+    border-color: #9C3E3E;
+    border-width: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    align-self: center;
+    margin-bottom: 30px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.guru__info img {
+    border-style: double;
+    border-color: #9C3E3E;
+    border-width: 10px;
+    max-height: 160px;
+    max-width: 130px;
+}
+
+.guru__text {
+    font-weight: 200;
+    line-height: 25px;
+    display: inline-block;
+    width: 70%;
+
+}
+
+.guru__text p {
+    color: #98230C;
+    font-weight: bold;
+}
+
+.home__left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    width: 25%;
+}
+
+.home__left-side img {
+    margin-top: 45px;
+    width: 150px;
+}
+
+@keyframes spinning {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}
+
+.spin {
+    animation-name: spinning;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    /* linear | ease | ease-in | ease-out | ease-in-out */
+    animation-timing-function: linear;
+}
+
+.hide {
+    display: none;
+}

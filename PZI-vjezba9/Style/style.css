@@ -1,0 +1,484 @@
+/*općenito*/
+* {
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur814.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur814.png), auto !important;
+  scroll-behavior: smooth;
+} 
+
+body {
+  font-family: 'Lucida Console', monospace;
+    background-color: #3366ff;
+    margin:0px auto;
+    text-indent: 5px;
+}
+
+  h3{
+    color:rgb(186, 197, 36);
+    text-align: center;
+    font-size: 35px;
+}
+
+/*img{
+  max-width: 1440px;
+}
+/*Gornja traka*/
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: #333399;
+    z-index: 2;
+    border-bottom-style: dotted;
+}
+
+.naruci-container{
+    display: flex;
+    position: sticky;
+    justify-content: space-between;
+    align-items: center;
+}
+/*ona shopping ikonica*/
+#shopping {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+  color: #ffff3c;
+  font-size: 20px;
+  order: 1;
+}
+#shopping > #shopping-count {
+  position: absolute;
+  top: 12.5px;
+  right: 12.5px;
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  background-color: #ffff3c;
+}
+
+/*shopping side menu*/
+
+#shopping-side-menu {
+  position: fixed;
+  top: 77px;
+  right: 0;
+  width: 0;
+  height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  border-left: 3px dashed rgb(186, 197, 36);
+  background-color: /*#f4f4f4*/ #333399;
+  overflow-y: auto;
+  z-index: 3;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+#shopping-side-menu.active {
+  width: 25vw;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* prozorcici sa pizzama unutar side menua*/
+
+#shopping-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+#total-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 16px 8px;
+}
+
+.shopping-item {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template: auto auto / 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 8px 16px;
+  margin: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  text-align: left;
+}
+.shopping-item > .close {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.shopping-item > h3 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / span 2;
+  margin: 4px 0;
+}
+.item-info {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+.item-info > small {
+  color: #666;
+  margin-bottom: 4px;
+}
+.amount-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.amount-box > button {
+  height: 30px;
+  min-width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  font-size: 12px;
+  color: rgba(51, 51, 51, 0.8);
+  background-color: #eee;
+}
+.amount-box > button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/*linkovi za navgaciju*/
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.nav li {
+  display:inline-block;
+  padding:10px;
+}
+
+.nav a{color: #ffffff;text-decoration:none;}
+
+.nav a:hover{text-decoration:underline;}
+
+/*Banner sa slikom*/
+
+#Banner {
+  background-image: linear-gradient(to bottom, #333399 67%, #3366ff 93%);
+  position: relative;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  text-align: center;
+  padding: 80px 0 40px;
+  display:flex;
+  align-self: center;
+  justify-content: center;
+}
+
+
+#Početna{
+  color:white;
+  position: absolute;
+  /*top: 100%;
+  left: 50%;
+  transform: translate(-50%, -0%);*/
+  padding-bottom:80px;
+  text-align: center;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  align-self: center;
+ 
+}
+
+#Početna h3{
+  text-shadow: 2px 2px rgb(186, 197, 36);
+    font-weight: bold;
+}
+#Početna span{
+  display: block;
+    font-size: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-shadow: 2px 2px #333399;
+
+}
+
+#naruci {
+  position: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(186, 197, 36);
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+}
+
+  #naruci a{
+    color:black;
+    text-decoration: none;
+}
+
+  /*Novosti*/
+#Novosti{
+  padding: 80px 0 40px;
+}
+
+  /*Trenutni cjenik*/
+#Cijenik{
+  padding: 80px 0 40px;
+}
+
+.odaberi{
+  position: center;
+  padding: 10px;
+  margin: 20px;
+  background-color: rgb(186, 197, 36);
+  color:black;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+}
+
+  article{
+    max-width:400px;
+}
+
+  article:hover{
+    color:white;
+    background-color: #333399;
+    transition:1s;
+}
+
+#Cijenik h3{
+  font-size: 35px;
+  text-align: center;
+  padding: 15px;
+}
+
+#Cijenik img{
+  width:200px;
+  height:133.325px;
+}
+
+.vrste__container{
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+}
+#vrste{
+  width: 70%;
+  margin:20px;
+  display: flex; /*but ok */
+  text-align: center;
+  justify-content: center;
+ flex-wrap: wrap;
+}
+
+#vrste article{
+  padding:30px;
+}
+
+/*Stari cjenik*/
+
+#pozadinazatablicu{
+  background: url(../Slije/black-hole-png-drugaverzija.png) center center no-repeat;
+  background-size: cover;
+  color: white; 
+}
+
+table, tbody, tr {
+  display: grid;
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+  font-family: 'Architects Daughter', cursive;
+}
+
+table {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+thead tr {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  grid-template-columns: 50% 50%;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  font-weight: bold;
+  color:#333399;
+}
+
+.red-tablice{
+  grid-template-columns: 50% 50%;
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+}
+
+ /*kontakt*/
+ #Kontakt{
+  padding: 80px 0 40px;
+ }
+
+ /*locirajte nas*/
+
+ #Locirajte{
+  padding: 80px 0 40px;
+ }
+
+ #slika-lokacija{
+  background: url(../Slije/nebo.jpg);
+  background-size: cover;
+  color: white; 
+  background-repeat: no-repeat;
+  min-height: 400px;
+  background-position: center;
+}
+/*BonusKontakt*/
+
+#bonusKontakt{
+  padding: 80px 0 40px;
+  text-align:center;
+}
+
+/*footer*/
+
+  #linkovi{
+    display:flex; 
+    flex-direction:row;
+    list-style-type:none; 
+    font-size:25px;
+}
+
+  #sredilinkove{
+    margin: 15px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border: 3px solid #999;
+    border-radius: 50%;
+    color: #999;
+    font-size: 20px;
+    transition: all 1s ease;
+}
+
+  footer i:hover{
+    color:darkred;
+    background-color: #999;
+    box-shadow:0px 8px #999 ;
+    transition: 1s;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+  footer{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333399;
+}
+
+
+  
+
+ /* ZA MOBITEL */
+@media only screen and (max-width: 768px) {
+  .naruci-container {
+    -webkit-box-orient:vertical;
+	  -webkit-box-direction:normal;
+	  -ms-flex-direction:column;
+	  flex-direction:column;
+   }
+  
+   .naruci-container h2{
+    text-align:center;
+   }
+   
+   #Početna {
+     font-size:25px;
+   }
+
+   .vrste{
+    flex-wrap: wrap;
+  }
+
+  img{
+    max-width: 768px;
+  }
+
+} 
