@@ -1,127 +1,136 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz result</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-    <link href="Styles/results.css" rel="stylesheet" type="text/css" media="all">
-    <link href="Styles/style.css" rel="stylesheet" type="text/css" media="all">
+    <link
+      href="Styles/results.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="Styles/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
     <style type="text/css">
-        * {
-            cursor: url(https://cur.cursors-4u.net/cursors/cur-3/cur233.ani), url(https://cur.cursors-4u.net/cursors/cur-3/cur233.png), auto !important;
-        }
-    </style><a href="https://www.cursors-4u.com/cursor/2009/09/15/orange-glitter-pointer.html" target="_blank"
-        title="Orange Glitter Pointer"><img src="https://cur.cursors-4u.net/cursor.png" border="0"
-            alt="Orange Glitter Pointer" style="position:absolute; top: 0px; right: 0px;" /></a>
+      * {
+        cursor: url(https://cur.cursors-4u.net/cursors/cur-3/cur233.ani),
+          url(https://cur.cursors-4u.net/cursors/cur-3/cur233.png), auto !important;
+      }
+    </style>
+    <a
+      href="https://www.cursors-4u.com/cursor/2009/09/15/orange-glitter-pointer.html"
+      target="_blank"
+      title="Orange Glitter Pointer"
+      ><img
+        src="https://cur.cursors-4u.net/cursor.png"
+        border="0"
+        alt="Orange Glitter Pointer"
+        style="position: absolute; top: 0px; right: 0px"
+    /></a>
+  </head>
 
-</head>
-
-<body onload="start()">
-    <img src="Images/close.gif">
+  <body onload="start()">
+    <img src="Images/close.gif" />
 
     <div class="result">
-        <p>Your problems are very big, but not unsolvable! Guru Matej personally recommends it to you</p>
+      <p>
+        Your problems are very big, but not unsolvable! Guru Matthew personally
+        recommends it to you
+      </p>
 
-        <div class="product" onclick="newLink(linkElement)">
-
-            <p id="title"></p>
-            <img id="image">
-            <p>Regular price :</p>
-            <p id="priceOld"> </p>
-            <h3>But for you only...</h3>
-            <h2 id="priceNew"></h2>
-            <button><a href="shitlink.html">Buy now</a></button>
-
-        </div>
-
+      <div class="product" onclick="newLink(linkElement)">
+        <p id="title"></p>
+        <img id="image" />
+        <p>Regular price :</p>
+        <p id="priceOld"></p>
+        <h3>But for you only...</h3>
+        <h2 id="priceNew"></h2>
+        <button><a href="shitlink.html">Buy now</a></button>
+      </div>
     </div>
-    <a href="guruMatej.html">Natrag na početak</a>
+    <a href="gurumatthew.html">Back to the homepage</a>
     <script>
-        const imageElement = document.getElementById('image');
-        const titleElement = document.getElementById('title');
-        const priceOldElement = document.getElementById('priceOld');
-        const priceNewElement = document.getElementById('priceNew');
-        let linkElement = null;
+      const imageElement = document.getElementById("image");
+      const titleElement = document.getElementById("title");
+      const priceOldElement = document.getElementById("priceOld");
+      const priceNewElement = document.getElementById("priceNew");
+      let linkElement = null;
 
-        function newLink(linkElement) {
-            console.log(linkElement)
-            window.location.assign(linkElement)
-        }
+      function newLink(linkElement) {
+        console.log(linkElement);
+        window.location.assign(linkElement);
+      }
 
-        function start() {
-            let index = getRandomInt();
-            imageElement["src"] = product[index].image;
-            titleElement.innerText = product[index].title;
-            priceOldElement.innerText = product[index].priceOld;
-            priceNewElement.innerText = product[index].priceNew;
-            linkElement = product[index].link;
-            console.log(linkElement)
-        }
+      function start() {
+        let index = getRandomInt();
+        imageElement["src"] = product[index].image;
+        titleElement.innerText = product[index].title;
+        priceOldElement.innerText = product[index].priceOld;
+        priceNewElement.innerText = product[index].priceNew;
+        linkElement = product[index].link;
+        console.log(linkElement);
+      }
 
-        const product = [
-            {
-                image: "Images/jantarlow.jpg",
-                title: "Protective amber ring",
-                priceOld: "!!! 5,000 € !!!",
-                priceNew: "699 €",
-                link: "product1.html",
-            },
+      const product = [
+        {
+          image: "../NezadovoljniZivotom/Images/jantarlow.jpg",
+          title: "Protective amber ring",
+          priceOld: "!!! 5,000 € !!!",
+          priceNew: "699 €",
+          link: "product1.html",
+        },
 
-            {
-                image: "Images/azteclow.jpg",
-                title: "Aztec necklace of wisdom",
-                priceOld: "!!! 12,000 € !!!",
-                priceNew: "899 €",
-                link: "product2.html",
-            },
+        {
+          image: "../NezadovoljniZivotom/Images/azteclow.jpg",
+          title: "Aztec necklace of wisdom",
+          priceOld: "!!! 12,000 € !!!",
+          priceNew: "899 €",
+          link: "product2.html",
+        },
 
+        {
+          image: "../NezadovoljniZivotom/Images/quartzlow.jpg",
+          title: "Mountain quartz glass",
+          priceOld: "!!! 8,000 € !!!",
+          priceNew: "749 €",
+          link: "product3.html",
+        },
 
-            {
-                image: "Images/quartzlow.jpg",
-                title: "Mountain quartz glass",
-                priceOld: "!!! 8,000 € !!!",
-                priceNew: "749 €",
-                link: "product3.html",
+        {
+          image: "../NezadovoljniZivotom/Images/ametistlow.jpg",
+          title: "Amethyst crystal ball",
+          priceOld: "!!! 18,500 € !!!",
+          priceNew: "1,199 €",
+          link: "product4.html",
+        },
 
-            },
+        {
+          image: "../NezadovoljniZivotom/Images/blagoslovSetlow.jpg",
+          title: "Blessing set",
+          priceOld: "!!! 16,200 € !!!",
+          priceNew: "1,099 €",
+          link: "product5.html",
+        },
+        {
+          image: "../NezadovoljniZivotom/Images/mixSnaznihKristalalow.jpg",
+          title: "Guru Matthews's official crystal mix",
+          priceOld: "!!! 22,000 € !!!",
+          priceNew: "799 €",
+          link: "product6.html",
+        },
+      ];
 
-
-            {
-                image: "Images/ametistlow.jpg",
-                title: "Amethyst crystal ball",
-                priceOld: "!!! 18,500 € !!!",
-                priceNew: "1,199 €",
-                link: "product4.html",
-            },
-
-            {
-                image: "Images/blagoslovSetlow.jpg",
-                title: "Blessing set",
-                priceOld: "!!! 16,200 € !!!",
-                priceNew: "1,099 €",
-                link: "product5.html",
-
-            },
-            {
-                image: "Images/mixSnaznihKristalalow.jpg",
-                title: "Guru Matej's official crystal mix",
-                priceOld: "!!! 22,000 € !!!",
-                priceNew: "799 €",
-                link: "product6.html",
-
-            }
-
-
-        ]
-
-        function getRandomInt() {
-            return Math.floor(Math.random() * 6);
-        }
-
+      function getRandomInt() {
+        return Math.floor(Math.random() * 6);
+      }
     </script>
-</body>
+  </body>
 </html>

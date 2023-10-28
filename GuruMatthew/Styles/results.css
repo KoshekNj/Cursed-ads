@@ -24,7 +24,7 @@ b {
 }
 
 .product {
-    background: url("../Images/treeBackground.jpg") no-repeat center center;
+    background: url("../../NezadovoljniZivotom/Images/treeBackground.jpg") no-repeat center center;
     border-style: double;
     border-color: #9C3E3E;
     border-width: 10px;

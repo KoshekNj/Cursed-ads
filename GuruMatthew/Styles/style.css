@@ -7,7 +7,7 @@
 }
 
 body {
-    background: url("../Images/sunBackgroundlow.jpg") no-repeat center center;
+    background: url("../../NezadovoljniZivotom/Images/sunBackgroundlow.jpg") no-repeat center center;
     background-size: cover;
     color: black;
     font-family: Verdana;
@@ -87,7 +87,7 @@ a:hover {
 }
 
 .home__nav-bar {
-    background: url("../Images/version2.jpg");
+    background: url("../../NezadovoljniZivotom/Images/version2.jpg");
     border-style: double;
     border-color: #9C3E3E;
     border-width: 10px;
@@ -104,7 +104,7 @@ a:hover {
 }
 
 .guru__info {
-    background: url("../Images/version2.jpg");
+    background: url("../../NezadovoljniZivotom/Images/version2.jpg");
     border-style: double;
     border-color: #9C3E3E;
     border-width: 10px;

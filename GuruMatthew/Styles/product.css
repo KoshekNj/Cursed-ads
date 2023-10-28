@@ -13,7 +13,7 @@
 
     margin-bottom: 3rem;
     margin-top: 2rem;
-    background: url("../Images/treeBackground.jpg");
+    background: url("../../NezadovoljniZivotom/Images/treeBackground.jpg");
     background-size: cover;
 
     animation: glow 1s infinite alternate;
