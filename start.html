@@ -1,45 +1,68 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ADSpaece</title>
     <!-- The style.css file allows you to change the look of your web pages.
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
-    <link href="startStyle.css" rel="stylesheet" type="text/css" media="all">
-
+    <link href="startStyle.css" rel="stylesheet" type="text/css" media="all" />
 
     <style type="text/css">
-        * {
-            cursor: url(https://cur.cursors-4u.net/cursors/cur-3/cur218.ani), url(https://cur.cursors-4u.net/cursors/cur-3/cur218.png), auto !important;
-        }
-    </style><a href="https://www.cursors-4u.com/cursor/2009/04/22/cool-yellow-pointer-glitter.html" target="_blank"
-        title="Cool Yellow Pointer Glitter"><img src="https://cur.cursors-4u.net/cursor.png" border="0"
-            alt="Cool Yellow Pointer Glitter" style="position:absolute; top: 0px; right: 0px;" /></a>
+      * {
+        cursor: url(https://cur.cursors-4u.net/cursors/cur-3/cur218.ani),
+          url(https://cur.cursors-4u.net/cursors/cur-3/cur218.png), auto !important;
+      }
+    </style>
+    <a
+      href="https://www.cursors-4u.com/cursor/2009/04/22/cool-yellow-pointer-glitter.html"
+      target="_blank"
+      title="Cool Yellow Pointer Glitter"
+      ><img
+        src="https://cur.cursors-4u.net/cursor.png"
+        border="0"
+        alt="Cool Yellow Pointer Glitter"
+        style="position: absolute; top: 0px; right: 0px"
+    /></a>
+  </head>
+  <script>
+    function showP(id) {
+      document.getElementById(id).style.display = "block";
+    }
+  </script>
 
-</head>
-<script>
-    function showP() {
-            document.getElementById('tw').style.display = "block";
-        }
-
-</script>
-
-<body>
+  <body>
     <div class="header">
-        <img class="title" src="AdImages/cursedTitle.png" />
-        <p>New cursed ads added sometimes</p>
+      <img class="title" src="AdImages/cursedTitle.png" />
+      <p>
+        New cursed ads added sometimes. Will probs never be responsive because
+        it just doesn't match the concept.
+      </p>
     </div>
     <div class="ad-container">
-        <img src="AdImages/Banner1.png" onclick="document.location='/NezadovoljniZivotom/guruMatej.html'">
-        <img src="AdImages/Banner4.png" onclick="document.location='/Fairies/Fairies/fairy.html'">
-        
-        <input type="button" value="TW/spoiler" onclick="showP()" />
-        <p id="tw" style="display:none;"> Jumpscare when clicking "No thanks"</p>
-        <img src="AdImages/banner5.png" onclick="document.location='/PZI-vjezba9/index.html'">
+      <img
+        src="AdImages/Banner1.png"
+        onclick="document.location='/NezadovoljniZivotom/guruMatej.html'"
+      />
+      <img
+        src="AdImages/Banner4.png"
+        onclick="document.location='/Fairies/Fairies/fairy.html'"
+      />
+
+      <input type="button" value="TW/spoiler" onclick="showP('tw')" />
+      <p id="tw" style="display: none">Jumpscare when clicking "No thanks"</p>
+      <img
+        src="AdImages/banner5.png"
+        onclick="document.location='/PZI-vjezba9/index.html'"
+      />
+      <input type="button" value="Fun fact" onclick="showP('fun-fact')" />
+      <p id="fun-fact" style="display: none">
+        This was the first website I ever made and I still find it so funny and
+        endearing so I included it here eventhough it wasn't suppose to be a
+        cursed ad originally < 3
+      </p>
     </div>
-<p>Banners made with the photoshop wizard aka v1rtual4ngel on ig &lt 3</p>
-</body>
+    <p>Banners made with the photoshop wizard aka v1rtual4ngel on ig &lt 3</p>
+  </body>
 </html>
