@@ -13,7 +13,7 @@ body {
     font-family: Verdana;
     width: 100%;
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     border-style: double;
     border-color: #9C3E3E;
     border-width: 10px;
@@ -49,13 +49,15 @@ a {
 .title {
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .home {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
     height: 100%;
 }
 

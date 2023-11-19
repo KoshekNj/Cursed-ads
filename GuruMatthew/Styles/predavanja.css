@@ -1,3 +1,7 @@
+.border{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .predavanja {
     display: flex;
     flex-direction: column;
@@ -8,7 +12,7 @@
 }
 
 table {
-    background: url("../Images/version2.jpg") no-repeat center center;
+    background: url("../../NezadovoljniZivotom/Images/version2.jpg") no-repeat center center;
     width: 60%;
 }
 

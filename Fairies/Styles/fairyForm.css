@@ -35,7 +35,7 @@ p{
 
 .form label{
     margin:5px;
-
+    display: block;
 }
 .form{
     padding-left:5rem;
@@ -66,9 +66,9 @@ p{
 }
 
 .form .customP{
-    margin-top: 1rem;
+margin-left:0px;
+margin-top: 30px;
     margin-left: 1rem;
-   width:70%;
 }
 
 

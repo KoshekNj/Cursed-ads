@@ -8,13 +8,12 @@ button:hover p {
 }
 
 .border {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .quiz {
+    margin: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
