@@ -1,0 +1,45 @@
+body{
+    height: 100vh;
+    margin: auto;
+    padding:30px;
+    background: url("./discobg.jpg") no-repeat center center;
+        background-size: cover;
+}
+
+img{
+max-height: 200px;
+}
+
+.game__closet{
+
+    border-style: solid;
+        border-width: 5px;
+        border-color: grey;
+        width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+.game{
+    display: flex;
+    width: 100%;
+    margin:0 auto;
+    height: 100%;
+}
+
+.doll{
+    background: url("./doll.png") no-repeat;
+    background-size: contain;
+
+    width: 230px;
+        height: 400px;
+        padding: 24px;
+}
+
+.doll__dress{
+    height: 224px;
+        top: 82px;
+        position: relative;
+        height: 200px;
+}
+

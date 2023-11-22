@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
+    <script>
+      function dragStartHandler(event) {
+        var internalDNDType = "f:image/png";
+        /*console.log(event.target.dataset.value);
+        var internalDNDType = "f:image/png";
+        if (event.target) {
+          // use the element's data-value="" attribute as the value to be moving:
+          event.dataTransfer.setData(
+            internalDNDType,
+            event.target.dataset.value
+          );
+          console.log(event.dataTransfer);
+          event.dataTransfer.effectAllowed = "move"; // only allow moves
+        } else {
+          event.preventDefault(); // don't allow selection to be dragged
+        }*/
+
+        event.dataTransfer.setData("text/plain", event.target.id);
+        setTimeout(() => {
+          event.target.classList.add("hide");
+        }, 0);
+      }
+
+      function dragEnterHandler(event) {
+        event.preventDefault();
+        event.target.classList.add("drag-over");
+      }
+      function dragOverHandler(event) {
+        event.dataTransfer.dropEffect = "move";
+        event.preventDefault();
+      }
+
+      function dropHandler(event) {
+        event.target.classList.remove("drag-over");
+
+        const id = event.dataTransfer.getData("text/plain");
+        const droppable = document.querySelector(".doll__dress");
+        const closet = document.querySelector(".game__closet");
+        const draggable = document.getElementById(id);
+        const current = droppable.querySelector("img");
+
+        console.log(event.target.className);
+        if (event.target.className == "doll__dress") {
+          console.log("prvi");
+          droppable.appendChild(draggable);
+        } else if (current && event.target.className == "game__closet") {
+          console.log("drugi");
+          console.log(current);
+          closet.appendChild(draggable);
+        } else if (current && !event.target.className) {
+          console.log(event.target.className);
+          console.log("treci");
+          closet.appendChild(current);
+          droppable.appendChild(draggable);
+        }
+
+        draggable.classList.remove("hide");
+      }
+
+      // function dragEndHandler(event) {
+      //   if (event.dataTransfer.dropEffect == "move") {
+      //     e.target.classList.remove("drag-over");
+      //   }
+      // }
+    </script>
+  </head>
+
+  <body>
+    <div class="game">
+      <div
+        ondragover="dragOverHandler(event)"
+        ondrop="dropHandler(event)"
+        class="game__closet"
+      >
+        <img
+          ondragstart="dragStartHandler(event)"
+          ondragenter="dragEnterHandler(event)"
+          id="p1"
+          draggable="true"
+          data-value="dress-1"
+          src="./dress.png"
+        />
+        <img
+          ondragstart="dragStartHandler(event)"
+          ondragenter="dragEnterHandler(event)"
+          id="p2"
+          draggable="true"
+          data-value="dress-2"
+          src="./dress2.png"
+        />
+        <img
+          ondragstart="dragStartHandler(event)"
+          ondragenter="dragEnterHandler(event)"
+          id="p3"
+          draggable="true"
+          data-value="dress-3"
+          src="./dress3.png"
+        />
+      </div>
+
+      <div class="doll">
+        <div
+          ondragover="dragOverHandler(event)"
+          ondrop="dropHandler(event)"
+          class="doll__dress"
+        ></div>
+      </div>
+    </div>
+  </body>
+</html>
