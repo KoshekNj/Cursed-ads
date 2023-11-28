@@ -15,7 +15,7 @@ body{
 }
 
 .doll {
-    background: url("./Base.png") no-repeat center;
+    background: url("./Assets2/Base.png") no-repeat center;
     background-size: contain;
     font-size: 0px;
     width: 400px;
@@ -25,7 +25,14 @@ body{
 
 #doll__dress{
     max-width: 400px;
-    position: relative;
+    position: absolute;
+    z-index: 20;
+}
+
+#doll__bottoms{
+    max-width: 400px;
+    position: absolute;
+    z-index: 10;
 }
      
 #doll__shoes{
@@ -34,7 +41,7 @@ body{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+   
 }
 
 .buttons{
