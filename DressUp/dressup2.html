@@ -20,28 +20,82 @@
   </head>
 
   <body>
+    <div class="game--descriptor" id="game--descriptor">
+      <p>...</p>
+    </div>
     <div class="gossiptv">
-      <p>
+      <p class="crt">
         His girlfriend he always talks about being kinda crazy and ADHD is
-        actually imaginary. I mean the girl is real, but she doesn't know they
+        actually imaginary. I mean the girl is real, she just doesn't know they
         are dating lol.
       </p>
     </div>
     <div class="game">
       <div class="buttons">
-        <button id="previous-button__dress"><-</button>
-        <button id="previous-button__bottoms"><-</button>
-        <button id="previous-button__shoes"><-</button>
+        <button
+          id="previous-button__makeup"
+          onmouseover="setDescriptor('make up')"
+          onmouseout="setDescriptor('...')"
+        >
+          <-
+        </button>
+        <button
+          id="previous-button__dress"
+          onmouseover="setDescriptor('tops')"
+          onmouseout="setDescriptor('...')"
+        >
+          <-
+        </button>
+        <button
+          id="previous-button__bottoms"
+          onmouseover="setDescriptor('bottoms')"
+          onmouseout="setDescriptor('...')"
+        >
+          <-
+        </button>
+        <button
+          id="previous-button__shoes"
+          onmouseover="setDescriptor('shoes')"
+          onmouseout="setDescriptor('...')"
+        >
+          <-
+        </button>
       </div>
       <div class="doll">
+        <img id="doll__makeup" />
         <img id="doll__dress" />
         <img id="doll__bottoms" />
         <img id="doll__shoes" />
       </div>
       <div class="buttons">
-        <button id="next-button__dress">-></button>
-        <button id="next-button__bottoms">-></button>
-        <button id="next-button__shoes">-></button>
+        <button
+          id="next-button__makeup"
+          onmouseover="setDescriptor('make up')"
+          onmouseout="setDescriptor('...')"
+        >
+          ->
+        </button>
+        <button
+          id="next-button__dress"
+          onmouseover="setDescriptor('tops')"
+          onmouseout="setDescriptor('...')"
+        >
+          ->
+        </button>
+        <button
+          id="next-button__bottoms"
+          onmouseover="setDescriptor('bottoms')"
+          onmouseout="setDescriptor('...')"
+        >
+          ->
+        </button>
+        <button
+          id="next-button__shoes"
+          onmouseover="setDescriptor('shoes')"
+          onmouseout="setDescriptor('...')"
+        >
+          ->
+        </button>
       </div>
     </div>
   </body>

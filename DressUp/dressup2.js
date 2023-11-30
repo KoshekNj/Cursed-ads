@@ -1,41 +1,51 @@
+const previousMakeup = document.getElementById("previous-button__makeup");
+const nextMakeup = document.getElementById("next-button__makeup");
 const previousDress = document.getElementById("previous-button__dress");
 const nextDress = document.getElementById("next-button__dress");
 const previousShoes = document.getElementById("previous-button__shoes");
 const nextShoes = document.getElementById("next-button__shoes");
 const previousBottoms = document.getElementById("previous-button__bottoms");
 const nextBottoms = document.getElementById("next-button__bottoms");
+const makeup = document.getElementById("doll__makeup");
 const dress = document.getElementById("doll__dress");
 const shoes = document.getElementById("doll__shoes");
 const bottoms = document.getElementById("doll__bottoms");
 
+let indexMakeup = 0;
 let indexDress = 0;
 let indexShoes = 0;
 let indexBottoms = 0;
 
+previousMakeup.classList.add("hide");
 previousDress.classList.add("hide");
 previousShoes.classList.add("hide");
 previousBottoms.classList.add("hide");
+previousMakeup.setAttribute("disabled", "");
 previousDress.setAttribute("disabled", "");
 previousShoes.setAttribute("disabled", "");
 previousBottoms.setAttribute("disabled", "");
 
 const clothes = [
   {
+    makeup: "./Assets2/HEADforshirtsetc.png",
     dress: "",
     bottoms: "",
     shoes: "",
   },
   {
-    dress: "./Assets2/DressPurple1.png",
+    makeup: "./Assets2/Blue90sMakeup.png",
+    dress: "./Assets2/CheetahTop.png",
     bottoms: "./Assets2/CrossJeans.png",
     shoes: "./Assets2/ShoeGothBoots.png",
   },
   {
+    makeup: "./Assets2/ColdGirlMakeup.png",
     dress: "./Assets2/WhiteCorset.png",
     bottoms: "./Assets2/LeatherBucklePants.png",
     shoes: "",
   },
   {
+    makeup: "./Assets2/SmokeyDivaMakeup.png",
     dress: "./Assets2/BowTop.png",
     bottoms: "./Assets2/LowRiseJeans.png",
     shoes: "./Assets2/PointyHeels.png",
@@ -46,6 +56,16 @@ const clothes = [
     shoes: "./Assets2/PointyHeels.png",
   },
 ];
+
+nextMakeup.addEventListener("click", () => {
+  indexMakeup++;
+  setMakeup();
+});
+
+previousMakeup.addEventListener("click", () => {
+  indexMakeup--;
+  setMakeup();
+});
 
 nextDress.addEventListener("click", () => {
   indexDress++;
@@ -76,6 +96,25 @@ previousBottoms.addEventListener("click", () => {
   indexBottoms--;
   setBottoms();
 });
+
+function setMakeup() {
+  showMakeup(clothes[indexMakeup]);
+  if (indexMakeup == 0) {
+    previousMakeup.classList.add("hide");
+    previousMakeup.setAttribute("disabled", "");
+  }
+  if (indexMakeup > 0 && indexMakeup < clothes.length - 1) {
+    previousMakeup.classList.remove("hide");
+    nextMakeup.classList.remove("hide");
+    previousMakeup.removeAttribute("disabled", "");
+    nextMakeup.removeAttribute("disabled", "");
+  }
+
+  if (indexMakeup == clothes.length - 1) {
+    nextMakeup.classList.add("hide");
+    nextMakeup.setAttribute("disabled", "");
+  }
+}
 
 function setDress() {
   showDress(clothes[indexDress]);
@@ -134,6 +173,10 @@ function setBottoms() {
   }
 }
 
+function showMakeup() {
+  makeup["src"] = clothes[indexMakeup].makeup;
+}
+
 function showDress() {
   dress["src"] = clothes[indexDress].dress;
 }
@@ -144,4 +187,9 @@ function showShoes() {
 
 function showBottoms() {
   bottoms["src"] = clothes[indexBottoms].bottoms;
+}
+
+function setDescriptor(description) {
+  let descriptor = document.getElementById("game--descriptor");
+  descriptor.innerText = description;
 }
