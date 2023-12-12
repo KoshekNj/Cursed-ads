@@ -10,11 +10,13 @@ const makeup = document.getElementById("doll__makeup");
 const dress = document.getElementById("doll__dress");
 const shoes = document.getElementById("doll__shoes");
 const bottoms = document.getElementById("doll__bottoms");
+const gossipTv = document.getElementById("crt");
 
 let indexMakeup = 0;
 let indexDress = 0;
 let indexShoes = 0;
 let indexBottoms = 0;
+let indexGossip = 0;
 
 previousMakeup.classList.add("hide");
 previousDress.classList.add("hide");
@@ -192,4 +194,17 @@ function showBottoms() {
 function setDescriptor(description) {
   let descriptor = document.getElementById("game--descriptor");
   descriptor.innerText = description;
+}
+
+function setGossip() {
+  let arrayGossip = [
+    "...",
+    "His girlfriend he always talks about being kinda crazy and ADHD is actually imaginary. I mean the girl is real, she just doesn't know they are dating lol.",
+    "Her ex is going to every party she goes to, yet he never wanted to go out when they were together. He also cut his hair and started going to the gym. So obvious.",
+    "\"Oh she slept with her besties's boyfriend, she only has simps, her art is not that good\"...all that because she got a job you wanted? It's been years c'mon...",
+  ];
+  gossipTv.innerText = arrayGossip[indexGossip];
+  if (indexGossip < arrayGossip.length - 1) indexGossip++;
+  else indexGossip = 1;
+  const myTimeout = setTimeout(setGossip, 30000);
 }
