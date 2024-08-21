@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spaecraft</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link
+      href="./Style/style.css"
+      rel="stylesheet"
+      type="text/css"
+      media="all"
+    />
+
+    <style type="text/css">
+      * {
+        cursor: url(https://cur.cursors-4u.net/cursors/cur-3/cur218.ani),
+          url(https://cur.cursors-4u.net/cursors/cur-3/cur218.png), auto !important;
+      }
+    </style>
+    <a
+      href="https://www.cursors-4u.com/cursor/2009/04/22/cool-yellow-pointer-glitter.html"
+      target="_blank"
+      title="Cool Yellow Pointer Glitter"
+      ><img
+        src="https://cur.cursors-4u.net/cursor.png"
+        border="0"
+        alt="Cool Yellow Pointer Glitter"
+        style="position: absolute; top: 0px; right: 0px"
+    /></a>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jomhuria&family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <script>
+    const heroes = [
+      {
+        name: "Leana",
+        story:
+          "She won’t be melee fighting - that could damage her nails. But this long haired beauty is a hacker, and with right tools and motives, she can turn an entire fleet of spaceships to a mush in just seconds. Apparently she’s very good with her fingers from all that hacking too.",
+        image: "./Images/leanaProfile.png",
+      },
+      {
+        name: "Giannius",
+        story:
+          "Don’t judge a packet by it’s size. This little red head is packed with knives, muscles, and most importantly, insantiable thirst for spilling blood. Be warned though, she likes to...erm...bite ;)",
+        image: "./Images/gianniusProfile.png",
+      },
+      {
+        name: "Meliah",
+        story:
+          "Snap! Crack! Meliah’s favourite pastime is whipping her (not-so-much) victims with her trusty leather whiplash. That is also her job. Talk about mixing work with pleasure.",
+        image: "./Images/meliahProfile.png",
+      },
+      {
+        name: "Jennie",
+        story:
+          "She may look shy and timid, but this young cadet is known for taking huge risks and receiving even bigger rewards when fighting the space wars. She has a tendency to sacrifice female collegues she doesn’t like, but she gets away with it because her talent is invaluable.",
+        image: "./Images/jennieProfile.png",
+      },
+      {
+        name: "Natalia",
+        story:
+          "This woman’s curves could bare so many children, but she gave all of that up just to fight other women in the galaxy more efficiently. She doesn’t care about politics or economics, she only cares about getting rid of other women.",
+        image: "./Images/nataliaProfile.png",
+      },
+      {
+        name: "Ruslana",
+        story:
+          "“The crazy bitch, the lady of the night, the boy”...Ruslana is always the main talk of the Matrihisia galaxy and beyond. Though she is a celebrity, drugs and sleeping around don’t excite her as much as wheilding swords butt naked.",
+        image: "./Images/ruslanaProfile.png",
+      },
+      {
+        name: "Carlihta",
+        story:
+          "Don’t dare mess with her, she can shoot you with her arrow from the other end of the galaxy. She is peaceful by nature, but turns agressive when you disrespect her tigers or the Queen. Roumor has it the Queen has a soft spot for her too, though there is nothing soft(core) about their activities under the sheets...",
+        image: "./Images/carlithaProfile.png",
+      },
+    ];
+
+    function openModal(name) {
+      console.log(name);
+      const modal = document.getElementsByClassName("modal");
+      console.log(modal);
+      const image = document.getElementById("hero-image");
+      const story = document.getElementById("hero-story");
+      const nameTitle = document.getElementById("hero-name");
+
+      var hero = findHero(name);
+      console.log(hero);
+      modal[0].style.display = "block";
+      image["src"] = hero.image;
+      story.innerText = hero.story;
+      nameTitle.innerText = hero.name;
+    }
+
+    function findHero(name) {
+      let i = 0;
+      let selectedHero = {};
+      for (i = 0; i < heroes.length; i++) {
+        if (heroes[i].name === name) selectedHero = heroes[i];
+      }
+
+      return selectedHero;
+    }
+
+    function closeOverlay() {
+      var e = document.getElementsByClassName("modal");
+      e[0].style.display = "none";
+    }
+  </script>
+
+  <body>
+    <nav class="nav">
+      <img src="./Images/title.png" />
+      <div class="nav__links">
+        <a href="#about">About</a>
+        <a href="#characters">Characters</a>
+        <a href="#download">Download</a>
+      </div>
+    </nav>
+    <img
+      class="decoration-image--one"
+      src="./Images/monster-7221848_1280-min.png"
+    />
+    <img
+      class="decoration-image--two"
+      src="./Images/dragon-1940348_1280-min.png"
+    />
+
+    <img
+      class="decoration-image--three"
+      src="./Images/girl-1921403_1280-min.png"
+    />
+    <img
+      class="decoration-image--four"
+      src="./Images/girl-1924147_1280-min.png"
+    />
+    <div class="container">
+      <h1 id="about">About</h1>
+      <div class="video">
+        <video width="400" controls>
+          <source src="mov_bbb.mp4" type="video/mp4" />
+          Your browser does not support HTML video.
+        </video>
+      </div>
+      <div class="frame">
+        <p>
+          Spaecraft is a free-to-play MMORPG set in Matrihsia, the distant
+          galaxy densely inhabited by several wild, murderous, and power-hungry
+          tribes of women. The Queen is scrambling to form an army that will
+          bring peace to the galaxy, but emotions are high and keeping her
+          warriors loyal gets harder as each day full of rumors and love games
+          passes in the chaos of wartime.
+        </p>
+        <ul>
+          <li>
+            Choose between 7 mouth-watering, forget-you-have-a-wife-at-home kind
+            of sexy female warriors
+          </li>
+          <li>
+            Wield swords, num-chuks, shoot lasers, deflect bullets with your
+            humongous chest – the opportunities are vast
+          </li>
+          <li>
+            Play your cards right and you might find yourself in some really
+            steamy situations
+          </li>
+        </ul>
+        <p>
+          Join our badass space ladies in this epic journey full of strategy,
+          action, plot twists, spaceships and of course...personalities ;)
+        </p>
+      </div>
+      <h1 id="characters">Characters</h1>
+      <div class="characters">
+        <figure onclick="openModal('Leana')">
+          <img src="./Images/girl-1676585_1280-min.png" />
+        </figure>
+        <figure onclick="openModal('Meliah')">
+          <img src="./Images/woman-1550284_1280-min.png" />
+        </figure>
+        <figure onclick="openModal('Jennie')">
+          <img src="./Images/woman-3633051_1280-min.png" />
+        </figure>
+        <figure onclick="openModal('Carlihta')">
+          <img
+            class="archer-image"
+            src="./Images/archer-3114538_128011-min.png"
+          />
+        </figure>
+        <figure onclick="openModal('Natalia')">
+          <img src="./Images/woman-1280880_1280-min.png" />
+        </figure>
+        <figure onclick="openModal('Giannius')">
+          <img src="./Images/girl-1921654_1280-min.png" />
+        </figure>
+        <figure onclick="openModal('Ruslana')">
+          <img src="./Images/girl-1913433_1280-min.png" />
+        </figure>
+      </div>
+
+      <div class="modal">
+        <div class="modal__container">
+          <img src="" id="hero-image" />
+          <div class="hero-information">
+            <h1 id="hero-name"></h1>
+            <p id="hero-story"></p>
+          </div>
+          <button
+            title="Close"
+            onClick="closeOverlay()"
+            class="close-button"
+            id="close"
+          >
+            <h1>X</h1>
+          </button>
+        </div>
+      </div>
+
+      <h1 id="download">Download</h1>
+      <div class="frame">
+        <p>System requirements</p>
+        <ul>
+          <li>OS *: Windows 7/8/10/11 with latest service packs</li>
+          <li>Processor: Intel Core2 Duo 2Ghz or equivalent</li>
+          <li>Memory: 2 GB RAM</li>
+          <li>
+            Graphics: NVIDIA GeForce 8800GT 512MB or AMD Radeon HD 2900XT 512MB
+            or better
+          </li>
+          <li>DirectX: Version 9.0c</li>
+          <li>Network: Broadband Internet connection</li>
+          <li>Storage: 4 GB available space</li>
+        </ul>
+        <br />
+      </div>
+      <input type="button" class="button" />
+    </div>
+  </body>
+</html>
