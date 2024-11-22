@@ -1,138 +1,175 @@
 html,
 body {
-    background: url("/Fairies/Images/fairyBacc.png") no-repeat center center;
-    background-size: cover;
-    color: white;
-    font-family: Verdana;
-    margin: 0px;
-    padding: 0px;
-    /* font-style: italic; */
-    overflow: hidden;
-    position: relative;
-    z-index: 0;
-    height: 100%;
-    display: flex;
-    
+  background: url("/Fairies/Images/fairyBacc.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  font-family: Verdana;
+  margin: 0px;
+  padding: 0px;
+  /* font-style: italic; */
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  display: flex;
+  width: 100%;
+  display: block;
 }
 
-p{
-    margin-left: 30px;
-    margin-top:0px;
+p {
+  margin-left: 30px;
+  margin-top: 0px;
 }
 
-.title{
-    height: 17%;
-    width:70%;
+.title {
+  height: 17%;
+  width: 100%;
 }
 
 .left-side {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    width:70%;
-    padding: 1rem;
+  width: auto;
+  padding: 1rem;
 }
 
-.form label{
-    margin:5px;
-    display: block;
+.form label {
+  margin: 5px;
+  display: block;
 }
-.form{
-    padding-left:5rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.form input{
-    width: 80%;
-    background: rgba(255, 255, 255, 0.6);
-    border: none;
-    min-height:30px;
-    padding-left: 5px;
-    margin-bottom:5px;
+.form {
+  padding-left: 0rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.card-information{
-    display: flex;
-    justify-content: space-between;
-    width:87%;
+.form input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  border: none;
+  min-height: 30px;
+  padding-left: 5px;
+  margin-bottom: 5px;
 }
 
-.card-information input{
-    margin-top: 5px;
-}
-.card-information--left{
-    width:50%;
-}
-
-.form .customP{
-margin-left:0px;
-margin-top: 30px;
-    margin-left: 1rem;
+.card-information {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
+.card-information input {
+  margin-top: 5px;
+  width: 100%;
+}
+.card-information--left {
+  width: 50%;
+}
 
-.card-information--right{
-  width:40%;
+.form .customP {
+  margin-left: 0px;
+  margin-top: 30px;
+  margin-left: 1rem;
+}
+
+.card-information--right {
+  width: 40%;
 }
 button {
-    align-self: center;
-    margin-top: 5%;
-    width: 300px;
-    height: 50px;
-    border-radius: 25px;
-    border-color: #f8faed;
-    border-width: 3px;
-    background-color: black;
+  align-self: center;
+  margin-top: 5%;
+  width: 300px;
+  height: 50px;
+  border-radius: 25px;
+  border-color: #f8faed;
+  border-width: 3px;
+  background-color: black;
 }
 
 button:hover {
-    box-shadow: 0 0 50px 15px #f8faed;
+  box-shadow: 0 0 50px 15px #f8faed;
 }
 .buttonImage {
-    max-width: 200px;
-    max-height: 35px;
-    padding-top: 5px;
-    padding-bottom: 3px;
-    padding-left: 5px;
-    padding-right: 5px;
-
+  max-width: 200px;
+  max-height: 35px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-.right-side{
-    display: flex;
-    align-items: flex-end;
-    width:40%;
+.right-side {
+  width: 40%;
+  display: block;
+  position: absolute;
+  z-index: -10;
+  bottom: -10px;
 }
 
-.right-side img{
-        min-width: 100%;
-        max-height: 100%;
+.right-side img {
+  min-width: 100%;
+  max-height: 100%;
 }
 
 .ads__button {
-    position: fixed;
-    z-index: 40;
-    bottom: 0px;
-    right: 10px;
+  position: fixed;
+  z-index: 40;
+  bottom: 0px;
+  right: 10px;
 }
 
 .ads__button--image {
-    display: block;
-    max-width: 150px;
-    animation-name: expand;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+  display: block;
+  max-width: 150px;
+  animation-name: expand;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 @keyframes expand {
+  100%,
+  0% {
+    transform: scale(1);
+  }
 
-    100%,
-    0% {
-        transform: scale(1);
-    }
+  50% {
+    transform: scale(0.7);
+  }
+}
 
-    50% {
-        transform: scale(0.7);
-    }
+@media screen and (min-width: 990px) {
+  .body {
+    display: flex;
+  }
+  .title {
+    width: 70%;
+  }
+
+  .left-side {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .form {
+    padding-left: 5rem;
+  }
+
+  .form input {
+    width: 80%;
+  }
+
+  .card-information {
+    width: 87%;
+  }
+
+  /*.card-information input {
+    width: auto;
+  }*/
+
+  .right-side {
+    display: flex;
+    align-items: flex-end;
+    width: 40%;
+  }
 }

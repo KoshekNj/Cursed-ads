@@ -37,7 +37,7 @@
       <img class="title" src="../Images/ThankYou.png" />
     </div>
     <div class="bottom">
-      <p>Enjoy now ;*</p>
+      <p id="add-name"></p>
     </div>
     <a href="../../start.html" class="ads__button">
       <img
@@ -49,8 +49,11 @@
 
   <script>
     function print() {
+      const addNameElement = document.getElementById("add-name");
       let email = localStorage.getItem("email");
       let name = localStorage.getItem("name");
+      addNameElement.innerText = "Enjoy now " + name + " ;*";
+      console.log(addNameElement);
       console.log(email);
       console.log(name);
     }
