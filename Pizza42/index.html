@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="Style/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../PZI-vjezba9/Style/style.css"
+    />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
@@ -18,15 +22,31 @@
     />
   </head>
 
+  <script>
+    function closeNav() {
+      const modal = document.getElementsByClassName("nav-modal");
+      modal[0].classList.remove("mobile-modal-visible");
+    }
+    function openNav() {
+      const modal = document.getElementsByClassName("nav-modal");
+      modal[0].classList.add("mobile-modal-visible");
+    }
+  </script>
+
   <body>
     <header>
       <div class="naruci-container">
+        <button class="nav-burger" onclick="openNav()">
+          <div class="nav-burger__line"></div>
+          <div class="nav-burger__line"></div>
+          <div class="nav-burger__line"></div>
+        </button>
         <h2 style="color: rgb(186, 197, 36)">"Pizza bar"</h2>
         <div id="shopping">
           <i class="fas fa-shopping-cart"></i>
           <span id="shopping-count"></span>
         </div>
-        <ul class="nav">
+        <!--<ul class="nav">
           <li><a href="#Banner">Homepage</a></li>
           <li><a href="#Novosti">News</a></li>
           <li><a href="#Cijenik">Menu</a></li>
@@ -35,7 +55,24 @@
           <li>
             <a href="../PZI-vjezba9/index.html" style="color: red">Croatian</a>
           </li>
-        </ul>
+        </ul>-->
+        <div class="nav-modal">
+          <button onclick="closeNav()" class="nav-close">Close</button>
+          <ul class="nav">
+            <li><a href="#Banner" onclick="closeNav()">Homepage</a></li>
+            <li><a href="#Novosti" onclick="closeNav()">News</a></li>
+            <li><a href="#Cijenik" onclick="closeNav()">Menu</a></li>
+            <li><a href="#Kontakt" onclick="closeNav()">Contact</a></li>
+            <li>
+              <a href="#Locirajte" onclick="closeNav()">Locate our pizzerias</a>
+            </li>
+            <li>
+              <a href="../PZI-vjezba9/index.html" style="color: red"
+                >Croatian</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -58,14 +95,14 @@
 
         <span>We deliver to your h̴̡̙̐ō̶̩m̸̪̌ͅȩ̶̻͈̌̍́ ̸͉͎͛̄ ̴̛͉̣́͝ ̴̗͚̂͐͑ ̷̪̄á̵̖̣̮d̶̘̠͌̔͑r̷̳̯̹͘ȅ̴̠̳̂s̴͚̣͇̃́s̴̮̳̬̀̏̚</span>
       </div>
-      <p>
-        <img
-          src="Slije/pizza_PNGljubicasta.png"
-          alt="pizzeiljudi"
-          width="800"
-          height="403.638"
-        />
-      </p>
+
+      <img
+        src="Slije/pizza_PNGljubicasta.png"
+        alt="pizzeiljudi"
+        width="800"
+        height="403.638"
+      />
+
       <br />
       <br />
     </section>

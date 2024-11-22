@@ -110,6 +110,7 @@ function onCloseElement(event) {
     itemInCart.remove();
 
     calculateTotalPrice(); //makne i cijenu
+    incrementCount();
 }
 
 function onPlus(event) {

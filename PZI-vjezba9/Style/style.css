@@ -1,40 +1,96 @@
 /*općenito*/
 * {
-  cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur814.ani), url(http://cur.cursors-4u.net/cursors/cur-9/cur814.png), auto !important;
+  cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur814.ani),
+    url(http://cur.cursors-4u.net/cursors/cur-9/cur814.png), auto !important;
   scroll-behavior: smooth;
-} 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: 'Lucida Console', monospace;
-    background-color: #3366ff;
-    margin:0px auto;
-    text-indent: 5px;
+  font-family: "Lucida Console", monospace;
+  background-color: #3366ff;
+  margin: 0px auto;
+  text-indent: 5px;
 }
 
-  h3{
-    color:rgb(186, 197, 36);
-    text-align: center;
-    font-size: 35px;
+h3 {
+  color: rgb(186, 197, 36);
+  text-align: center;
+  font-size: 35px;
 }
 
+[id] {
+  scroll-margin: 20px;
+}
 /*img{
   max-width: 1440px;
 }
 /*Gornja traka*/
 
-header{
-    position: sticky;
-    top: 0;
-    background-color: #333399;
-    z-index: 2;
-    border-bottom-style: dotted;
+header {
+  position: sticky;
+  top: 0;
+  background-color: #333399;
+  z-index: 2;
+  border-bottom-style: dotted;
 }
 
-.naruci-container{
-    display: flex;
-    position: sticky;
-    justify-content: space-between;
-    align-items: center;
+.nav-modal {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  background-color: #16112de5;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+}
+
+.mobile-modal-visible {
+  display: block;
+}
+
+.nav-modal > .nav-close {
+  display: block;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  color: yellow;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  background: none;
+  margin-left: auto;
+}
+
+.nav-burger {
+  width: 32px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+  border: none;
+  background: none;
+}
+
+.nav-burger__line {
+  height: 3px;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(203, 189, 24, 1) 0%,
+    rgba(231, 222, 107, 1) 100%
+  );
+}
+
+.naruci-container {
+  display: flex;
+  position: sticky;
+  justify-content: space-between;
+  align-items: center;
 }
 /*ona shopping ikonica*/
 #shopping {
@@ -49,20 +105,21 @@ header{
   order: 1;
 }
 #shopping > #shopping-count {
-  position: absolute;
-  top: 12.5px;
-  right: 12.5px;
+  top: -12px;
+  position: relative;
+  right: 7px;
   width: 16px;
   height: 16px;
   min-width: 16px;
   display: flex;
-  justify-content: center;
+
   align-items: center;
   color: #333;
   font-size: 12px;
   font-weight: 600;
   border-radius: 50%;
   background-color: #ffff3c;
+  z-index: -10;
 }
 
 /*shopping side menu*/
@@ -85,7 +142,7 @@ header{
   transition: all 0.3s ease;
 }
 #shopping-side-menu.active {
-  width: 25vw;
+  width: 100%;
   opacity: 1;
   visibility: visible;
 }
@@ -98,8 +155,12 @@ header{
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: 75%;
+  align-self: center;
+  align-items: center;
 }
 #total-price {
   display: -webkit-box;
@@ -131,6 +192,8 @@ header{
   border-radius: 4px;
   background-color: white;
   text-align: left;
+  width: 250px;
+  height: 200px;
 }
 .shopping-item > .close {
   position: absolute;
@@ -144,6 +207,10 @@ header{
   -ms-grid-column-span: 2;
   grid-column: 1 / span 2;
   margin: 4px 0;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding: 16px;
+  font-size: 20px;
 }
 .item-info {
   height: 100%;
@@ -205,20 +272,38 @@ header{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+
   flex-grow: 1;
   text-align: center;
+  padding-left: 0px;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 35%;
+  margin-top: 20%;
 }
 
 .nav li {
-  display:inline-block;
-  padding:10px;
+  display: inline-block;
+  padding: 10px;
 }
 
-.nav a{color: #ffffff;text-decoration:none;}
+.nav a {
+  color: #b7b740;
+  text-decoration: none;
+}
 
-.nav a:hover{text-decoration:underline;}
+.nav a:hover {
+  text-decoration: underline;
+}
 
+.pizzabox label {
+  width: 205px;
+  display: block;
+}
 /*Banner sa slikom*/
 
 #Banner {
@@ -229,19 +314,19 @@ header{
   transform: translate(-50%, -5%);
   text-align: center;
   padding: 80px 0 40px;
-  display:flex;
+  display: flex;
   align-self: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
-
-#Početna{
-  color:white;
+#Početna {
+  color: white;
   position: absolute;
   /*top: 100%;
   left: 50%;
   transform: translate(-50%, -0%);*/
-  padding-bottom:80px;
+  padding-bottom: 80px;
   text-align: center;
   font-size: 35px;
   display: flex;
@@ -250,22 +335,20 @@ header{
   justify-content: center;
   text-align: center;
   align-self: center;
- 
 }
 
-#Početna h3{
+#Početna h3 {
   text-shadow: 2px 2px rgb(186, 197, 36);
-    font-weight: bold;
+  font-weight: bold;
 }
-#Početna span{
+#Početna span {
   display: block;
-    font-size: 1em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    text-shadow: 2px 2px #333399;
-
+  font-size: 1em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-shadow: 2px 2px #333399;
 }
 
 #naruci {
@@ -278,86 +361,89 @@ header{
   font-weight: bold;
 }
 
-  #naruci a{
-    color:black;
-    text-decoration: none;
+#naruci a {
+  color: black;
+  text-decoration: none;
 }
 
-  /*Novosti*/
-#Novosti{
+/*Novosti*/
+#Novosti {
   padding: 80px 0 40px;
 }
 
-  /*Trenutni cjenik*/
-#Cijenik{
+/*Trenutni cjenik*/
+#Cijenik {
   padding: 80px 0 40px;
 }
 
-.odaberi{
+.odaberi {
   position: center;
   padding: 10px;
   margin: 20px;
   background-color: rgb(186, 197, 36);
-  color:black;
+  color: black;
   border-radius: 25px;
   border: none;
   font-weight: bold;
 }
 
-  article{
-    max-width:400px;
+article {
+  max-width: 400px;
 }
 
-  article:hover{
-    color:white;
-    background-color: #333399;
-    transition:1s;
+article:hover {
+  color: white;
+  background-color: #333399;
+  transition: 1s;
 }
 
-#Cijenik h3{
+#Cijenik h3 {
   font-size: 35px;
   text-align: center;
   padding: 15px;
 }
 
-#Cijenik img{
-  width:200px;
-  height:133.325px;
+#Cijenik img {
+  width: 200px;
+  height: 133.325px;
 }
 
-.vrste__container{
+.vrste__container {
   width: 100%;
   display: flex;
 
   justify-content: center;
 }
-#vrste{
+#vrste {
   width: 70%;
-  margin:20px;
+  margin: 20px;
   display: flex; /*but ok */
   text-align: center;
   justify-content: center;
- flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
-#vrste article{
-  padding:30px;
+#vrste article {
+  padding: 30px;
 }
 
 /*Stari cjenik*/
 
-#pozadinazatablicu{
-  background: url(../Slije/black-hole-png-drugaverzija.png) center center no-repeat;
+#pozadinazatablicu {
+  background: url(../Slije/black-hole-png-drugaverzija.png) center center
+    no-repeat;
   background-size: cover;
-  color: white; 
+  color: white;
 }
 
-table, tbody, tr {
+table,
+tbody,
+tr {
   display: grid;
   text-align: center;
   padding: 20px;
   font-size: 30px;
-  font-family: 'Architects Daughter', cursive;
+  font-family: "Architects Daughter", cursive;
 }
 
 table {
@@ -372,10 +458,10 @@ thead tr {
   grid-template-columns: 50% 50%;
   border-bottom: 2px solid rgb(255, 255, 255);
   font-weight: bold;
-  color:#333399;
+  color: #333399;
 }
 
-.red-tablice{
+.red-tablice {
   grid-template-columns: 50% 50%;
   border-bottom: 2px solid rgb(255, 255, 255);
 }
@@ -385,103 +471,92 @@ td {
   vertical-align: inherit;
 }
 
- /*kontakt*/
- #Kontakt{
+/*kontakt*/
+#Kontakt {
   padding: 80px 0 40px;
- }
+}
 
- /*locirajte nas*/
+/*locirajte nas*/
 
- #Locirajte{
+#Locirajte {
   padding: 80px 0 40px;
- }
+}
 
- #slika-lokacija{
+#slika-lokacija {
   background: url(../Slije/nebo.jpg);
   background-size: cover;
-  color: white; 
+  color: white;
   background-repeat: no-repeat;
   min-height: 400px;
   background-position: center;
 }
 /*BonusKontakt*/
 
-#bonusKontakt{
+#bonusKontakt {
   padding: 80px 0 40px;
-  text-align:center;
+  text-align: center;
 }
 
 /*footer*/
 
-  #linkovi{
-    display:flex; 
-    flex-direction:row;
-    list-style-type:none; 
-    font-size:25px;
+#linkovi {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  font-size: 25px;
 }
 
-  #sredilinkove{
-    margin: 15px;
-    width: 55px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border: 3px solid #999;
-    border-radius: 50%;
-    color: #999;
-    font-size: 20px;
-    transition: all 1s ease;
+#sredilinkove {
+  margin: 15px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 3px solid #999;
+  border-radius: 50%;
+  color: #999;
+  font-size: 20px;
+  transition: all 1s ease;
 }
 
-  footer i:hover{
-    color:darkred;
-    background-color: #999;
-    box-shadow:0px 8px #999 ;
-    transition: 1s;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
+footer i:hover {
+  color: darkred;
+  background-color: #999;
+  box-shadow: 0px 8px #999;
+  transition: 1s;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
 }
 
-  footer{
-    margin-top:20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #333399;
+footer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333399;
 }
 
-
-  
-
- /* ZA MOBITEL */
+/* ZA MOBITEL */
 @media only screen and (max-width: 768px) {
-  .naruci-container {
-    -webkit-box-orient:vertical;
-	  -webkit-box-direction:normal;
-	  -ms-flex-direction:column;
-	  flex-direction:column;
-   }
-  
-   .naruci-container h2{
-    text-align:center;
-   }
-   
-   #Početna {
-     font-size:25px;
-   }
+  .naruci-container h2 {
+    text-align: center;
+  }
 
-   .vrste{
+  #Početna {
+    font-size: 25px;
+  }
+
+  .vrste {
     flex-wrap: wrap;
   }
 
-  img{
+  img {
     max-width: 768px;
   }
-
-} 
+}
 
 .ads__button {
   position: fixed;
@@ -499,7 +574,6 @@ td {
 }
 
 @keyframes expand {
-
   100%,
   0% {
     transform: scale(1);
@@ -507,5 +581,66 @@ td {
 
   50% {
     transform: scale(0.7);
+  }
+}
+
+@media only screen and (min-width: 982px) {
+  .nav-modal {
+    display: block;
+    background: none;
+    position: relative;
+    height: auto;
+    width: auto;
+  }
+
+  .nav-modal > .nav-close {
+    display: none;
+  }
+
+  .nav a {
+    color: #ffffff;
+  }
+  .nav {
+    justify-content: flex-end;
+    flex-direction: row;
+    margin-top: 0rem;
+  }
+  .naruci-container h2 {
+    text-align: center;
+  }
+
+  #Početna {
+    font-size: 25px;
+  }
+
+  .vrste {
+    flex-wrap: wrap;
+  }
+
+  img {
+    max-width: 768px;
+  }
+
+  .nav-burger {
+    display: none;
+  }
+
+  #shopping-items {
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    align-self: auto;
+  }
+
+  #shopping-item {
+    width: 250px;
+    height: 200px;
+    width: auto;
+    height: auto;
+  }
+
+  #shopping-side-menu.active {
+    width: 25vw;
   }
 }

@@ -18,24 +18,46 @@
     />
   </head>
 
+  <script>
+    function closeNav() {
+      const modal = document.getElementsByClassName("nav-modal");
+      modal[0].classList.remove("mobile-modal-visible");
+    }
+    function openNav() {
+      const modal = document.getElementsByClassName("nav-modal");
+      modal[0].classList.add("mobile-modal-visible");
+    }
+  </script>
   <body>
     <header>
       <div class="naruci-container">
+        <button class="nav-burger" onclick="openNav()">
+          <div class="nav-burger__line"></div>
+          <div class="nav-burger__line"></div>
+          <div class="nav-burger__line"></div>
+        </button>
         <h2 style="color: rgb(186, 197, 36)">"Pizza bar"</h2>
         <div id="shopping">
           <i class="fas fa-shopping-cart"></i>
           <span id="shopping-count"></span>
         </div>
-        <ul class="nav">
-          <li><a href="#Banner">Početna</a></li>
-          <li><a href="#Novosti">Novosti</a></li>
-          <li><a href="#Cijenik">Cjenik</a></li>
-          <li><a href="#Kontakt">Kontakt</a></li>
-          <li><a href="#Locirajte">Locirajte naše pizzerie</a></li>
-          <li>
-            <a href="../Pizza42/index.html" style="color: red">English</a>
-          </li>
-        </ul>
+        <div class="nav-modal">
+          <button onclick="closeNav()" class="nav-close">Zatvori</button>
+          <ul class="nav">
+            <li><a href="#Banner" onclick="closeNav()">Početna</a></li>
+            <li><a href="#Novosti" onclick="closeNav()">Novosti</a></li>
+            <li><a href="#Cijenik" onclick="closeNav()">Cjenik</a></li>
+            <li><a href="#Kontakt" onclick="closeNav()">Kontakt</a></li>
+            <li>
+              <a href="#Locirajte" onclick="closeNav()"
+                >Locirajte naše pizzerie</a
+              >
+            </li>
+            <li>
+              <a href="../Pizza42/index.html" style="color: red">English</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -58,14 +80,14 @@
 
         <span>Dostavljamo na ku̧̩̞̿ͅĉ̭̣͌̅̌́n̡̞̪̩̺̤̺̠͓ͨū̜̜͖̋̀ͅ ͚̼͒͜a̸̻̫̬͉͈̮͊͌̿d̜͈̋̕r̵̙̥̼̮͙̪̱̮̀̋ͮe͂̓ͩ͆҉͓̱̰̩s̛͕͈̥͚̥̘̋͋͊ͅu̴̝͓̹̞͇̳ͨ̽</span>
       </div>
-      <p>
-        <img
-          src="Slije/pizza_PNGljubicasta.png"
-          alt="pizzeiljudi"
-          width="800"
-          height="403.638"
-        />
-      </p>
+
+      <img
+        src="Slije/pizza_PNGljubicasta.png"
+        alt="pizzeiljudi"
+        width="800"
+        height="403.638"
+      />
+
       <br />
       <br />
     </section>
@@ -213,14 +235,14 @@
         Ometate naše nove (!!!) 100% ljudske bez obzira na glasine (!!!) šefove
       </p>
       <h4>Kontaktirajte nas putem</h4>
-      <p>Upozorenje : Ovo može vidjeti samo Frano Rezo</p>
-      <p>Ako vidite samo svoj odraz u ekranu niste Frano Rezo</p>
+      <p>Upozorenje : Ovo može vidjeti samo Odabrani</p>
+      <p>Ako vidite samo svoj odraz u ekranu niste Odabrani</p>
       <!--Ne znam jeste gledali zadnju vježbu, al u njoj sam vam krivo napisala ime, isprike :/-->
       <li><a href="mailto:tzupan02@fesb.hr">tzupan02@fesb.hr</a></li>
       <li>Teams chat, ali potragu za njim vršite samostalno</li>
       <br />
       <a href="#bonusKontakt"
-        >Nisam Frano Rezo, naporan/na sam, imam pitanja i želio/željela bih vas
+        >Nisam Odabran, naporan/na sam, imam pitanja i želio/željela bih vas
         pratiti na fejsu</a
       >
       <!--Ovo poviše je link za rješenje 1. zadatka 3. vježbe-->
@@ -252,7 +274,7 @@
 
     <div id="bonusKontakt">
       <!--Ovo sam samo vidila u rješenju ove vježbe pa eto-->
-
+      <!--<form method="post" onsubmit="sendEmail()">-->
       <h2>(つ◉益◉)つ 𝔻𝕠𝕓𝕣𝕠...𝕣𝕖𝕔𝕚𝕥𝕖 𝕥𝕜𝕠 𝕤𝕥𝕖 𝕚 š𝕥𝕠 𝕚𝕞𝕒𝕥𝕖 𝕫𝕒 𝕣𝕖ć𝕚....</h2>
       <h4>Unesite svoj mail:</h4>
       <input
@@ -270,9 +292,14 @@
         rows="4"
       ></textarea>
       <br />
-      <button style="background-color: rgb(186, 197, 36)" type="button">
+      <button
+        style="background-color: rgb(186, 197, 36)"
+        type="button"
+        onclick="sendMail()"
+      >
         Šalji
       </button>
+      <!--</form>-->
     </div>
 
     <footer>
@@ -318,4 +345,15 @@
     </a>
   </body>
   <script src="./Javascript/scripts.js"></script>
+
+  <script>
+    const sendMail = () => {
+      const mailAdress = "koshek.dev@gmail.com";
+      const subject = encodeURIComponent("Pizza42");
+      const body = encodeURIComponent(document.getElementById("poruka").value);
+      console.log(body);
+      const link = `mailto:${mailAdress}&subject=${subject}&body=${body}`;
+      window.location.href = link;
+    };
+  </script>
 </html>
