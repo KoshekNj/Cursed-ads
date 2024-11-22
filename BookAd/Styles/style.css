@@ -3,141 +3,175 @@
    "how to change link color." */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background: url("../Images/background.png") no-repeat center center fixed;
-    background-size: cover;
-    color: black;
-    font-family: Verdana;
-    width: 100%;
-    margin: 0px;
-    padding: 0px;
-    min-height: 100vh;
-    color:white;
-    font-family: 'MedievalSharp';
-    line-height: 20px;
-    text-align: center;
-    font-size: 16px;
+  background: url("../Images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: black;
+  font-family: Verdana;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  color: white;
+  font-family: "MedievalSharp";
+  line-height: 20px;
+  text-align: center;
+  font-size: 16px;
 }
 
-.container__main{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    padding:0px 80px 0px 80px;
-    max-width: 1200px;
-    margin: 0 auto;
+.container__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px 0px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.container__main button{
-    margin-top: 5%;
-        width: 200px;
-        height: 50px;
-        border-radius: 25px;
-        border-color: #f8faed;
-        border-width: 3px;
-        background-color: black;
-        color:white;
-        font-size: 26px;
-        font-family: 'JejuGothic';
+.container__main button {
+  margin-top: 5%;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border-color: #f8faed;
+  border-width: 3px;
+  background-color: black;
+  color: white;
+  font-size: 26px;
+  font-family: "JejuGothic";
 }
 
-.title--image{
-    margin:30px 0px 30px 0px;
+.title--image {
+  margin: 30px 0px 30px 0px;
+  max-width: 100%;
 }
-.container__main button:hover{
-box-shadow: 0 0 50px 15px #f8faed;
+.container__main button:hover {
+  box-shadow: 0 0 50px 15px #f8faed;
 }
-.container__newbook{
-    display: flex;
-    width:70%;
-    margin-bottom:50px;
-}
-
-.container__newbook img{
-   max-width: 225px;
-   margin-right: 15px;
+.container__newbook {
+  display: flex;
+  width: 90%;
+  justify-content: space-evenly;
+  margin-bottom: 50px;
 }
 
-.container__newbook--book{
-box-shadow: 10px 5px 5px #1f1d1d;
-}
-.container__right{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding:0px 30px 0px 30px;
-
+.container__newbook img {
+  max-width: 225px;
+  margin-right: 15px;
 }
 
-.container__right img{
-    max-width:290px;
+.container__newbook--book {
+  box-shadow: 10px 5px 5px #1f1d1d;
+}
+.container__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 0px 0px 30px;
 }
 
-.text--yellow{
-    color:#FFC72E;
+.container__right img {
+  max-width: 290px;
 }
 
-.container__right--text{
-    padding: 0px 30px 0px 30px;
+.text--yellow {
+  color: #ffc72e;
 }
 
-.container__books{
-    margin-top:50px;
-    margin-bottom:50px;
-    width:70%;
-    display: flex;
-    justify-content: space-between;
+.container__right--text {
+  padding: 0px 0px 0px 30px;
 }
 
-.container__books--book{
-    max-width: 330px;
-}
-.container__books--book img{
-max-width: 185px;
-box-shadow: 10px 5px 5px #1f1d1d;
-}
-
-.container__blog{
-    margin-bottom:50px;
-}
-.container__blog img{
-    text-align: start;
+.container__books {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 90%;
+  gap: 3rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-.container__blog button{
-    text-decoration: underline;
-    padding-left: 15px;
-    padding-right: 15px;
-    width: 225px;
+.container__books--book {
+  max-width: 330px;
+}
+.container__books--book img {
+  max-width: 185px;
+  box-shadow: 10px 5px 5px #1f1d1d;
+}
+
+.container__blog {
+  margin-bottom: 50px;
+}
+.container__blog img {
+  text-align: start;
+}
+
+.container__blog button {
+  text-decoration: underline;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 225px;
 }
 
 .ads__button {
-    position: fixed;
-    z-index: 40;
-    bottom: 0px;
-    right: 10px;
+  position: fixed;
+  z-index: 40;
+  bottom: 0px;
+  right: 10px;
 }
 
 .ads__button--image {
+  display: block;
+  max-width: 150px;
+  animation-name: expand;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@media screen and (min-width: 900px) {
+  .container__newbook {
+    width: 70%;
+  }
+  .container__books {
+    width: 70%;
+  }
+
+  .container__main {
+    padding: 0px 80px 0px 80px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container__newbook {
     display: block;
-    max-width: 150px;
-    animation-name: expand;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+  }
+
+  .container__right {
+    padding: 0rem;
+  }
+
+  .container__right--text {
+    padding: 0rem;
+    margin: 0.5rem;
+  }
+
+  .container__books {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 
 @keyframes expand {
+  100%,
+  0% {
+    transform: scale(1);
+  }
 
-    100%,
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(0.7);
-    }
+  50% {
+    transform: scale(0.7);
+  }
 }
