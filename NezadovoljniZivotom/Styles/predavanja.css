@@ -1,37 +1,49 @@
 .border {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .predavanja {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    justify-content: space-around;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  justify-content: space-around;
 }
 
 table {
-    background: url("../Images/version2.jpg") no-repeat center center;
-    width: 60%;
+  background: url("../Images/version2.jpg") no-repeat center center;
+  width: 60%;
 }
 
 td {
-    padding: 10px;
-
+  padding: 10px;
 }
 
 .gallery {
-    width: 60%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .gallery img {
-    height: 150px;
-    width: 200px;
-    margin-top: 15px;
+  height: 150px;
+  width: 200px;
+  margin-top: 15px;
+}
+
+.title-image {
+  max-width: 100%;
+}
+
+a:not(.predavanja) {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 392px) {
+  td {
+    padding: 6px;
+  }
 }

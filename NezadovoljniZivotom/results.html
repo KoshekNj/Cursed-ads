@@ -38,7 +38,7 @@
   </head>
 
   <body onload="start()">
-    <img src="Images/cilj.gif" />
+    <img src="Images/cilj.gif" class="title-image" />
 
     <div class="result">
       <p>
@@ -56,7 +56,7 @@
         <button><a href="shitlink.html">Kupi odmah</a></button>
       </div>
     </div>
-    <a href="guruMatej.html">Natrag na početak</a>
+    <a href="guruMatej.html" class="close-btn">Natrag na početak</a>
     <script>
       const imageElement = document.getElementById("image");
       const titleElement = document.getElementById("title");
@@ -65,7 +65,6 @@
       let linkElement = null;
 
       function newLink(linkElement) {
-        console.log(linkElement);
         window.location.assign(linkElement);
       }
 
@@ -76,7 +75,6 @@
         priceOldElement.innerText = product[index].priceOld;
         priceNewElement.innerText = product[index].priceNew;
         linkElement = product[index].link;
-        console.log(linkElement);
       }
 
       const product = [

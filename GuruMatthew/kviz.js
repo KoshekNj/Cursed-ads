@@ -32,7 +32,7 @@ const questions = [
   },
 
   {
-    question: "2. How do you feel at your job?",
+    question: "2. How do you feel at your workplace?",
     optionA: "1)Great",
     optionB: "2)Stressed",
     optionC: "3)People bother me",

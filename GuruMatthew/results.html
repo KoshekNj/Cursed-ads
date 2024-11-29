@@ -8,13 +8,13 @@
          If you include the next line in all your web pages, they will all share the same look.
          This makes it easier to make new pages for your site. -->
     <link
-      href="Styles/results.css"
+      href="../NezadovoljniZivotom/Styles/style.css"
       rel="stylesheet"
       type="text/css"
       media="all"
     />
     <link
-      href="Styles/style.css"
+      href="../NezadovoljniZivotom/Styles/results.css"
       rel="stylesheet"
       type="text/css"
       media="all"
@@ -38,12 +38,12 @@
   </head>
 
   <body onload="start()">
-    <img src="Images/close.gif" />
+    <img src="Images/close.gif" class="title-image" />
 
     <div class="result">
       <p>
         Your problems are very big, but not unsolvable! Guru Matthew personally
-        recommends it to you
+        recommends you
       </p>
 
       <div class="product" onclick="newLink(linkElement)">
@@ -56,7 +56,7 @@
         <button><a href="shitlink.html">Buy now</a></button>
       </div>
     </div>
-    <a href="gurumatthew.html">Back to the homepage</a>
+    <a href="gurumatthew.html" class="close-btn">Back to the homepage</a>
     <script>
       const imageElement = document.getElementById("image");
       const titleElement = document.getElementById("title");
@@ -65,7 +65,6 @@
       let linkElement = null;
 
       function newLink(linkElement) {
-        console.log(linkElement);
         window.location.assign(linkElement);
       }
 
@@ -76,7 +75,6 @@
         priceOldElement.innerText = product[index].priceOld;
         priceNewElement.innerText = product[index].priceNew;
         linkElement = product[index].link;
-        console.log(linkElement);
       }
 
       const product = [

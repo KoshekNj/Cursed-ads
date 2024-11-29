@@ -1,42 +1,58 @@
 button {
-    border: 0px;
-    background-color: transparent;
+  border: 0px;
+  background-color: transparent;
+  font-weight: bold;
 }
 
 button:hover p {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .border {
-    margin: 0 auto;
-    max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .quiz {
-    margin: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  margin: 3.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .quiz-container {
-    background: url("../Images/version1.jpg") no-repeat center center;
-    padding: 10px;
-    border-style: double;
-    border-color: #9C3E3E;
-    border-width: 10px;
-    width: 50%;
+  background: url("../Images/version1.jpg") no-repeat center center;
+  padding: 10px;
+  border-style: double;
+  border-color: #9c3e3e;
+  border-width: 10px;
+  width: 100%;
 }
 
 #question {
-    font-weight: bold;
-    margin-bottom: 40px;
+  font-weight: bold;
+  margin-bottom: 40px;
 }
 
 #answers {
-    margin: 10px;
+  margin: 10px;
 }
 
+.title {
+  max-width: 100%;
+}
 
+a {
+  font-weight: bold;
+}
 
+@media screen and (min-width: 640px) {
+  .quiz-container {
+    width: 50%;
+  }
+
+  .quiz {
+    margin: 50px;
+  }
+}
