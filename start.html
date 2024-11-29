@@ -28,7 +28,11 @@
   </head>
   <script>
     function showP(id) {
-      document.getElementById(id).style.display = "block";
+      var curr = document.getElementById(id);
+      if (curr.style.display == "none")
+        document.getElementById(id).style.display = "block";
+      else if (curr.style.display == "block")
+        document.getElementById(id).style.display = "none";
     }
   </script>
 
@@ -36,37 +40,41 @@
     <div class="header">
       <img class="title" src="AdImages/cursedTitle.png" />
       <p>
-        New cursed ads added sometimes. Will probs never be responsive because
-        it just doesn't match the concept.
+        Ad service suited for all the needs of a modern 2011. web master. Check
+        out the clients we represent.
       </p>
     </div>
     <div class="ad-container">
       <img
         src="AdImages/Banner1.png"
-        onclick="document.location='/NezadovoljniZivotom/guruMatej.html'"
+        onclick="document.location='/GuruMatthew/gurumatthew.html'"
       />
       <img
         src="AdImages/Banner4.png"
         onclick="document.location='/Fairies/Fairies/fairy.html'"
       />
-
+      <!--
       <input type="button" value="TW/spoiler" onclick="showP('tw')" />
-      <p id="tw" style="display: none">Jumpscare when clicking "No thanks"</p>
+      <p id="tw" style="display: none">Jumpscare when clicking "No thanks"</p>-->
       <img
         src="AdImages/banner5.png"
         onclick="document.location='/PZI-vjezba9/index.html'"
       />
-      <input type="button" value="Fun fact" onclick="showP('fun-fact')" />
+      <!--<input type="button" value="Fun fact" onclick="showP('fun-fact')" />
       <p id="fun-fact" style="display: none">
         This was the first website I ever made and I still find it so funny and
         endearing so I included it here eventhough it wasn't suppose to be a
         cursed ad originally < 3
-      </p>
+      </p>-->
       <img
         src="AdImages/banner3.png"
         onclick="document.location='/BookAd/samanthamjofficial.html'"
       />
+      <img
+        src="AdImages/Banner2.png"
+        onclick="document.location='/Spaecraft/spaecraft.html'"
+      />
     </div>
-    <p>Banners made with the photoshop wizard aka v1rtual4ngel on ig &lt 3</p>
+    <p>Banners made by v1rtual4ngel on ig</p>
   </body>
 </html>
